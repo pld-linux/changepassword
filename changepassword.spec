@@ -6,6 +6,7 @@ Release:	1
 License:	GPL
 Group:		Networking/Admin
 Source0:	http://dl.sourceforge.net/changepassword/%{name}-%{version}.tar.gz
+# Source0-md5:	c730d9878f65ada0b81e16e4150cb6a7
 URL:		http://changepassword.sourceforge.net/
 Requires:	apache
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
