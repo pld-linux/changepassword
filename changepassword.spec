@@ -17,7 +17,6 @@ License:	GPL
 Group:		Networking/Admin
 Source0:	http://dl.sourceforge.net/changepassword/%{name}-%{version}.tar.gz
 # Source0-md5:	7449a80c65db2e37c0aa3bb709926127
-# Source0-size:	220145
 Source1:	pldlogo.png
 URL:		http://changepassword.sourceforge.net/
 Requires:	apache
