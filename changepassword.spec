@@ -1,3 +1,6 @@
+#TODO
+# - move cgi binary to /usr/share/changepassword
+# - write changepassword.conf for apache redirection + execution
 Summary:	ChangePassword
 Summary(pl):	ChangePassword - modyfikator hase³
 Name:		changepassword
