@@ -1,6 +1,8 @@
 #TODO
 # - move cgi binary to /usr/share/changepassword
 # - write changepassword.conf for apache redirection + execution
+# - get sources for libdes and compile then instead of using
+#   precompiled version for x86!!!
 Summary:	ChangePassword
 Summary(pl):	ChangePassword - modyfikator hase³
 Name:		changepassword
@@ -49,5 +51,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc {README,CHANGELOG,LICENSE,BUGS,TODO}
+%doc BUGS CHANGELOG README TODO
+%lang(pt_BR) README.brazilian
 %attr(755,root,root) %{_cgidir}/changepassword.cgi
