@@ -5,12 +5,9 @@ Version:	0.5
 Release:	1
 License:	GPL
 Group:		Networking/Admin
-Source0:	http://prdownloads.sourceforge.net/changepassword/%{name}-%{version}.tar.gz
+Source0:	http://dl.sourceforge.net/changepassword/%{name}-%{version}.tar.gz
 URL:		http://changepassword.sourceforge.net/
 Requires:	apache
-Requires:	gcc
-Requires:	glibc
-BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define         _cgidir         /home/services/httpd/html/cgi-bin
@@ -29,7 +26,8 @@ zmieniane w trybie rzeczywistym.
 %setup -q
 
 %build
-./configure --enable-cgidir=/home/services/httpd/html/cgi-bin \
+%configure \
+	--enable-cgidir=/home/services/httpd/html/cgi-bin \
 	--enable-language=Polish \
 	--enable-smbpasswd=%{_sysconfdir}/smbpasswd \
 	--enable-squidpasswd=%{_sysconfdir}/squid/passwd
@@ -48,4 +46,4 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc {README,CHANGELOG,LICENSE,BUGS,TODO}
-%attr(755,root,http) %{_cgidir}/changepassword.cgi
+%attr(755,root,root) %{_cgidir}/changepassword.cgi
