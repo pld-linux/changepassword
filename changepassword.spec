@@ -24,11 +24,11 @@ po¶rednictwem interfejsu WWW. Wszystkie has³a s± synchronizowane i
 zmieniane w trybie rzeczywistym.
 
 %prep
-%setup -q -n %{name}-%{version}
+%setup -q
 
 %build
 %configure \
-	--enable-cgidir=/home/services/httpd/cgi-bin \
+	--enable-cgidir=%{_cgidir} \
 	--enable-language=Polish \
 	--enable-smbpasswd=%{_sysconfdir}/smbpasswd \
 	--enable-squidpasswd=%{_sysconfdir}/squid/passwd
@@ -39,7 +39,7 @@ zmieniane w trybie rzeczywistym.
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_cgidir}
 
-install changepassword.cgi     $RPM_BUILD_ROOT%{_cgidir}
+install changepassword.cgi $RPM_BUILD_ROOT%{_cgidir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
