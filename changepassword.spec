@@ -1,7 +1,7 @@
 #
 # Conditional build:
-%bcond_without samba   # without samba passwords support
-%bcond_without squid   # without squid passwords support
+%bcond_without	samba	# without samba passwords support
+%bcond_without	squid	# without squid passwords support
 
 #TODO
 # - move cgi binary to /usr/share/changepassword
@@ -22,7 +22,7 @@ URL:		http://changepassword.sourceforge.net/
 Requires:	apache
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define         _cgidir         /home/services/httpd/cgi-bin
+%define		_cgidir		/home/services/httpd/cgi-bin
 
 %description
 ChangePassword modifies the passwords of passwd, Samba, and Squid
@@ -42,7 +42,7 @@ cp %{SOURCE1} .
 %configure \
 	--enable-cgidir=%{_cgidir} \
 	--enable-language=Polish \
-        --enable-logo=pldlogo.png \
+	--enable-logo=pldlogo.png \
 	--enable-smbpasswd=%{_sysconfdir}/smbpasswd \
 	--enable-squidpasswd=%{_sysconfdir}/squid/passwd \
 %if %{without samba}
