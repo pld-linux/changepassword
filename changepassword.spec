@@ -51,5 +51,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc BUGS CHANGELOG README README.brazilian TODO
+%doc BUGS CHANGELOG README TODO
+%lang(pt_BR) %doc README.brazilian
 %attr(755,root,root) %{_cgidir}/changepassword.cgi
