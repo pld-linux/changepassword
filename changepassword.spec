@@ -11,12 +11,13 @@
 Summary:	ChangePassword
 Summary(pl):	ChangePassword - modyfikator hase³
 Name:		changepassword
-Version:	0.7
-Release:	4
+Version:	0.8
+Release:	1
 License:	GPL
 Group:		Networking/Admin
 Source0:	http://dl.sourceforge.net/changepassword/%{name}-%{version}.tar.gz
-# Source0-md5:	b68a179e64dcffbfc4e410a84b6d3ecb
+# Source0-md5:	a1c8229e88a8c9f50d637a4fa6be921b
+# Source0-size:	220145
 Source1:	pldlogo.png
 URL:		http://changepassword.sourceforge.net/
 Requires:	apache
