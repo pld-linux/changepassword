@@ -7,7 +7,7 @@ Summary:	ChangePassword
 Summary(pl):	ChangePassword - modyfikator hase³
 Name:		changepassword
 Version:	0.7
-Release:	1
+Release:	2
 License:	GPL
 Group:		Networking/Admin
 Source0:	http://dl.sourceforge.net/changepassword/%{name}-%{version}.tar.gz
@@ -16,7 +16,7 @@ URL:		http://changepassword.sourceforge.net/
 Requires:	apache
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define         _cgidir         /home/services/httpd/cgi-bin
+%define         _cgidir         /srv/httpd/cgi-bin
 
 %description
 ChangePassword modifies the passwords of passwd, Samba, and Squid
