@@ -1,17 +1,17 @@
 Summary:	ChangePassword
 Summary(pl):	ChangePassword - modyfikator hase³
 Name:		changepassword
-Version:	0.6
+Version:	0.7
 Release:	1
 License:	GPL
 Group:		Networking/Admin
-Source0:	http://dl.sourceforge.net/changepassword/%{name}-%{version}-1.tar.gz
-# Source0-md5:	2c43424a7707f3e3e82d58d5ea971185
+Source0:	http://dl.sourceforge.net/changepassword/%{name}-%{version}.tar.gz
+# Source0-md5:	b68a179e64dcffbfc4e410a84b6d3ecb
 URL:		http://changepassword.sourceforge.net/
 Requires:	apache
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define         _cgidir         /home/services/httpd/html/cgi-bin
+%define         _cgidir         /home/services/httpd/cgi-bin
 
 %description
 ChangePassword modifies the passwords of passwd, Samba, and Squid
@@ -24,11 +24,11 @@ po¶rednictwem interfejsu WWW. Wszystkie has³a s± synchronizowane i
 zmieniane w trybie rzeczywistym.
 
 %prep
-%setup -q -n %{name}-%{version}-1
+%setup -q -n %{name}-%{version}
 
 %build
 %configure \
-	--enable-cgidir=/home/services/httpd/html/cgi-bin \
+	--enable-cgidir=/home/services/httpd/cgi-bin \
 	--enable-language=Polish \
 	--enable-smbpasswd=%{_sysconfdir}/smbpasswd \
 	--enable-squidpasswd=%{_sysconfdir}/squid/passwd
