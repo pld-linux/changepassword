@@ -1,12 +1,12 @@
 Summary:	ChangePassword
 Summary(pl):	ChangePassword - modyfikator hase³
 Name:		changepassword
-Version:	0.5
+Version:	0.6
 Release:	1
 License:	GPL
 Group:		Networking/Admin
-Source0:	http://dl.sourceforge.net/changepassword/%{name}-%{version}.tar.gz
-# Source0-md5:	c730d9878f65ada0b81e16e4150cb6a7
+Source0:	http://dl.sourceforge.net/changepassword/%{name}-%{version}-1.tar.gz
+# Source0-md5:	2c43424a7707f3e3e82d58d5ea971185
 URL:		http://changepassword.sourceforge.net/
 Requires:	apache
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -24,7 +24,7 @@ po¶rednictwem interfejsu WWW. Wszystkie has³a s± synchronizowane i
 zmieniane w trybie rzeczywistym.
 
 %prep
-%setup -q
+%setup -q -n %{name}-%{version}-1
 
 %build
 %configure \
