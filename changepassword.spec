@@ -3,7 +3,7 @@
 %bcond_without	samba	# without samba passwords support
 %bcond_without	squid	# without squid passwords support
 
-#TODO
+# TODO
 # - move cgi binary to /usr/share/changepassword
 # - write changepassword.conf for apache redirection + execution
 # - get sources for libdes and compile then instead of using
@@ -19,7 +19,7 @@ Source0:	http://dl.sourceforge.net/changepassword/%{name}-%{version}.tar.gz
 # Source0-md5:	7449a80c65db2e37c0aa3bb709926127
 Source1:	pldlogo.png
 URL:		http://changepassword.sourceforge.net/
-Requires:	apache
+Requires:	webserver = apache
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_cgidir		/home/services/httpd/cgi-bin
