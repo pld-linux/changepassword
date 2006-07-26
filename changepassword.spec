@@ -70,4 +70,4 @@ rm -rf $RPM_BUILD_ROOT
 %doc BUGS CHANGELOG README TODO
 %lang(pt_BR) %doc README.brazilian
 %attr(755,root,root) %{_cgidir}/changepassword.cgi
-%attr(644,root,root) /home/services/httpd/html/pldlogo.png
+/home/services/httpd/html/pldlogo.png
