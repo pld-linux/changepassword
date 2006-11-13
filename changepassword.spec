@@ -45,10 +45,10 @@ cp %{SOURCE1} .
 	--enable-logo=pldlogo.png \
 	--enable-smbpasswd=%{_sysconfdir}/smbpasswd \
 	--enable-squidpasswd=%{_sysconfdir}/squid/passwd \
-%if %{without samba}
+%if !%{with samba}
 	--disable-smbpasswd \
 %endif
-%if %{without squid}
+%if !%{with squid}
 	--disable-squidpasswd
 %endif
 
