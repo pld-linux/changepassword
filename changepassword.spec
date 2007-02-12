@@ -9,7 +9,7 @@
 # - get sources for libdes and compile then instead of using
 #   precompiled version for x86!!!
 Summary:	ChangePassword
-Summary(pl.UTF-8):   ChangePassword - modyfikator haseł
+Summary(pl.UTF-8):	ChangePassword - modyfikator haseł
 Name:		changepassword
 Version:	0.9
 Release:	1
