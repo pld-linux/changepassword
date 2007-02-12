@@ -9,7 +9,7 @@
 # - get sources for libdes and compile then instead of using
 #   precompiled version for x86!!!
 Summary:	ChangePassword
-Summary(pl):	ChangePassword - modyfikator hase≥
+Summary(pl.UTF-8):   ChangePassword - modyfikator hase≈Ç
 Name:		changepassword
 Version:	0.9
 Release:	1
@@ -29,9 +29,9 @@ ChangePassword modifies the passwords of passwd, Samba, and Squid
 through the Web. All passwords are syncronized and changed in real
 time through browsers like Mozilla, Netscape, IE, Opera, and others.
 
-%description -l pl
-ChangePassword modyfikuje has≥a dla passwd, Samby i Squida za
-po∂rednictwem interfejsu WWW. Wszystkie has≥a s± synchronizowane i
+%description -l pl.UTF-8
+ChangePassword modyfikuje has≈Ça dla passwd, Samby i Squida za
+po≈õrednictwem interfejsu WWW. Wszystkie has≈Ça sƒÖ synchronizowane i
 zmieniane w trybie rzeczywistym.
 
 %prep
