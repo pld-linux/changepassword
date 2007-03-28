@@ -43,7 +43,7 @@ cp %{SOURCE1} .
 	--enable-cgidir=%{_cgidir} \
 	--enable-language=Polish \
 	--enable-logo=pldlogo.png \
-	--enable-smbpasswd=%{_sysconfdir}/smbpasswd \
+	--enable-smbpasswd=/etc/samba/smbpasswd \
 	--enable-squidpasswd=%{_sysconfdir}/squid/passwd \
 %if !%{with samba}
 	--disable-smbpasswd \
