@@ -12,7 +12,7 @@ Summary:	ChangePassword
 Summary(pl.UTF-8):	ChangePassword - modyfikator haseł
 Name:		changepassword
 Version:	0.9
-Release:	1
+Release:	2
 License:	GPL
 Group:		Networking/Admin
 Source0:	http://dl.sourceforge.net/changepassword/%{name}-%{version}.tar.gz
