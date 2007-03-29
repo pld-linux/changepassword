@@ -1,13 +1,14 @@
-#
-# Conditional build:
-%bcond_without	samba	# without samba passwords support
-%bcond_without	squid	# without squid passwords support
-
 # TODO
+# - webapps
 # - move cgi binary to /usr/share/changepassword
 # - write changepassword.conf for apache redirection + execution
 # - get sources for libdes and compile then instead of using
 #   precompiled version for x86!!!
+#
+# Conditional build:
+%bcond_without	samba	# without samba passwords support
+%bcond_without	squid	# without squid passwords support
+#
 Summary:	ChangePassword
 Summary(pl.UTF-8):	ChangePassword - modyfikator haseł
 Name:		changepassword
@@ -43,12 +44,12 @@ cp %{SOURCE1} .
 	--enable-cgidir=%{_cgidir} \
 	--enable-language=Polish \
 	--enable-logo=pldlogo.png \
-	--enable-smbpasswd=%{_sysconfdir}/samba/smbpasswd \
-	--enable-squidpasswd=%{_sysconfdir}/squid/passwd \
-%if !%{with samba}
+	--enable-smbpasswd=/etc/samba/smbpasswd \
+	--enable-squidpasswd=/etc/squid/passwd \
+%if %{without samba}
 	--disable-smbpasswd \
 %endif
-%if !%{with squid}
+%if %{without squid}
 	--disable-squidpasswd
 %endif
 
