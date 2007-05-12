@@ -2,8 +2,6 @@
 # - webapps
 # - move cgi binary to /usr/share/changepassword
 # - write changepassword.conf for apache redirection + execution
-# - get sources for libdes and compile then instead of using
-#   precompiled version for x86!!!
 #
 # Conditional build:
 %bcond_without	samba	# without samba passwords support
@@ -38,6 +36,7 @@ zmieniane w trybie rzeczywistym.
 %prep
 %setup -q
 cp %{SOURCE1} .
+tar -xf smbencrypt/libdes-4.04b.tar.gz
 
 %build
 %configure \
@@ -53,6 +52,10 @@ cp %{SOURCE1} .
 	--disable-squidpasswd
 %endif
 
+cd des
+make
+install libdes.a ../smbencrypt
+cd ..
 %{__make}
 
 %install
