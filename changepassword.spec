@@ -53,7 +53,7 @@ tar -xf smbencrypt/libdes-4.04b.tar.gz
 %endif
 
 cd des
-make
+%{__make}
 install libdes.a ../smbencrypt
 cd ..
 %{__make}
