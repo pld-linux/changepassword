@@ -1,6 +1,6 @@
 # TODO
 # - webapps
-# - move cgi binary to /usr/share/changepassword
+# - move cgi binary to /usr/lib/changepassword
 # - write changepassword.conf for apache redirection + execution
 #
 # Conditional build:
