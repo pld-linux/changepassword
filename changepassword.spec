@@ -52,11 +52,19 @@ tar -xf smbencrypt/libdes-4.04b.tar.gz
 	--disable-squidpasswd
 %endif
 
-cd des
-%{__make}
-install libdes.a ../smbencrypt
-cd ..
-%{__make}
+%{__make} -C des \
+	CC="%{__cc}" \
+%ifarch %{ix86}
+	DES_INC="asm/dx86-elf.o asm/yx86-elf.o" \
+	CFLAG="%{rpmcflags} -DELF"
+%else
+	CFLAG="%{rpmcflags}"
+%endif
+install des/libdes.a smbencrypt
+
+%{__make} \
+	CC="%{__cc}" \
+	CFLAGS="%{rpmcflags}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
