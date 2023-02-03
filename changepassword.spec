@@ -11,12 +11,13 @@ Summary:	ChangePassword
 Summary(pl.UTF-8):	ChangePassword - modyfikator haseł
 Name:		changepassword
 Version:	0.9
-Release:	3
+Release:	4
 License:	GPL
 Group:		Networking/Admin
 Source0:	http://dl.sourceforge.net/changepassword/%{name}-%{version}.tar.gz
 # Source0-md5:	7449a80c65db2e37c0aa3bb709926127
 Source1:	pldlogo.png
+Patch0:         build.patch
 URL:		http://changepassword.sourceforge.net/
 Requires:	webserver = apache
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -37,6 +38,7 @@ zmieniane w trybie rzeczywistym.
 %setup -q
 cp %{SOURCE1} .
 tar -xf smbencrypt/libdes-4.04b.tar.gz
+%patch0 -p1
 
 %build
 %configure \

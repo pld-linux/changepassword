@@ -1,0 +1,10 @@
+--- changepassword-0.9/smbencrypt/encrypt.c~	2023-02-03 06:43:06.000000000 +0100
++++ changepassword-0.9/smbencrypt/encrypt.c	2023-02-03 06:43:15.489832268 +0100
+@@ -1,6 +1,6 @@
+ #include <stdio.h>
+ #include "nt.h"
+-char smbencrypted[66];
++extern char smbencrypted[66];
+ 
+ void smbencrypt(char *pass) {
+ 	char *p=strdup(pass);
