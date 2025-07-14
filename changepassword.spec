@@ -38,7 +38,7 @@ zmieniane w trybie rzeczywistym.
 %setup -q
 cp %{SOURCE1} .
 tar -xf smbencrypt/libdes-4.04b.tar.gz
-%patch0 -p1
+%patch -P0 -p1
 
 %build
 %configure \
